@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How does js execute its code</h1>
+    <script>
+        var a = 10;
+        console.log(a);
+        var b = "Gourav";
+        console.log(b);
+        function add(n1,n2){
+            var s = n1+n2;
+            return s;
+        }
+        var res = add(10,20);
+        console.log(res);
+    </script>
+</body>
+</html> -->
+
+
+<!-- Memory(var environment)    |    Code Execution
+a: undefine
+b: undefine
+Add 
+result
+
+GEC take snapshots of the script before the Execution to fill up the variable environment-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How does js execute its code</h1>
+    <script>
+        var a = 10;
+        console.log(a);
+        var b = "Gourav";
+        console.log(b);
+        function add(n1,n2){
+            var s = n1+n2;
+            function triple(t){
+                var thrice = t*t*t;
+                return thrice;
+            }
+            var res = triple(4);
+            console.log(res);
+            return s;
+        }
+        var res = add(10,20);
+        console.log(res);
+    </script>
+</body>
+</html>
