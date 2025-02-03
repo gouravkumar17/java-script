@@ -1,0 +1,30 @@
+console.log("1")
+setTimeout(()=>{
+    console.log("2")
+},2000)
+console.log("3");
+console.log("4");
+console.log("5");
+console.log("6");
+setTimeout(()=>{
+    console.log("7")
+},2000)
+console.log("8");
+console.log("9");
+console.log("10");
+console.log("11");
+console.log("12");
+console.log("13");
+setTimeout(()=>{
+    console.log("14")
+},2000)
+console.log("15");
+console.log("16");
+console.log("17");
+console.log("18");
+console.log("19");
+setTimeout(()=>{
+    console.log("20")
+},2000)
+console.log("21");
+console.log("22");
