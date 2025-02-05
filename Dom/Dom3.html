@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="main">Gourav Kumar</h1>
+    <button onclick="fun()">Click me</button> -->
+    <p class="para">Gourav</p>
+    <p class="para">Gourav</p>
+    <p class="para">Gourav</p>
+    <p class="para">Gourav</p>
+    <h1 class="para">Gourav</h1>
+    <button onclick="fun()">Click</button>
+    <script>
+        var ele = document.getElementsByClassName("para");
+        console.log(ele)
+        // function fun(){
+        //     ele.innerText = "Mehta" //not print hide data
+            // ele.textContent ="Kumar <mark>Mehta</mark>"
+        //}
+        function fun(){
+            for(let i=0;i<ele.length;i++){
+                ele[i].style.color = "red";
+                ele[i].innerHTML = "Gourav";
+                ele[i].style.backgroundColor = "yellow";
+            }
+        }
+    </script>
+</body>
+</html>

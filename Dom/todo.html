@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+</head>
+<body>
+    <h1>Add To-Do</h1>
+    <form onsubmit="Addtodo(event)">
+        <input type="text" id="input">
+        <button type="submit">Add To</button><br>
+    </form>
+    <ul id="list">
+    </ul>
+    <script>
+        var input = document.getElementById("input")
+        var list = document.getElementById("list")
+        function Addtodo(event){
+            event.preventDefault()
+            var x = input.value;
+            if(x){
+                var li = document.createElement("li");
+                li.innerHTML = x;
+                const completeBtn = document.createElement("button");
+                completeBtn.textContent = "Complete";
+                completeBtn.onclick = function(){
+                    li.classList.toggle("main");
+                }
+                const removeBtn = document.createElement("button");
+                removeBtn.textContent = "Remove";
+                removeBtn.style.marginLeft = "20px";
+                removeBtn.onclick = function(){
+                    li.remove();
+                }
+                li.appendChild(removeBtn);
+                li.appendChild(completeBtn);
+                list.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
