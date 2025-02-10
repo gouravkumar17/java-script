@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="heading"></h1>
+    <h3 id="paragrapgh"></h3>
+    <button onclick="fun()">Get Joke</button>
+    <script>
+        function fun(){
+            var data = fetch('https://official-joke-api.appspot.com/random_joke');
+            data.then((result)=>{
+                return result.json()
+            }).then((response)=>{
+                console.log(response);
+                document.getElementById("heading").innerHTML = response.setup;
+                document.getElementById("paragrapgh").innerHTML = response.punchline;
+            })
+        }
+    </script>
+</body>
+</html>
